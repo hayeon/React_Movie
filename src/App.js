@@ -1,4 +1,6 @@
+import ProTypes from "prop-types"; //prop types를 알아내기 위함
 import { useEffect, useState } from "react";
+import Movie from "./compo/Movie";
 
 function App() {
   const [loding, setLoding] = useState(true);
@@ -20,21 +22,31 @@ function App() {
 
   return (
     <div>
-      {loding ? <h1>loding</h1> : 
-      <div> {movieList.map(movie => 
-        <div key={movie.id}>
-        <img src={movie.medium_cover_image} />  
-        <h2> {movie.title}</h2> 
-        <h3>{movie.summary}</h3>
-        <ul>
-            {movie.genres.map(x => <li key={x}> {x}</li> )}
-        </ul>
-        </div>
-        )}
-      </div> }
+      {loding ? ( 
+      <h1>Loding</h1>) : (
+      <div> 
+        {movieList.map((movie) => (
+         <Movie  //props를 Movie로 줌
+         key={movie.id}
+         posterImage={movie.medium_cover_image}
+         title= {movie.title}
+         summary= {movie.summary} 
+         genres = {movie.genres} /> 
+         ))}
+      </div> 
+      )}
     </div>
   );
 
 }
+
+//proTypes 설정
+Movie.ProTypes = {
+  posterImage : ProTypes.string.isRequired,
+  title : ProTypes.string.isRequired,
+  summary : ProTypes.string.isRequired,
+  genres : ProTypes.arrayOf(ProTypes.string).isRequired,
+};
+
 
 export default App;
