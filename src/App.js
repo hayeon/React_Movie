@@ -5,7 +5,7 @@ import {BrowserRouter as Router,
 function App() {
 
 
-  return (
+  return ( //
 <Router>
   <Switch>
     <Route path="/"> {/* 홈으로 이동하는 라우터! 사용자가 /에 있으면 홈을 렌더링 할 거임 */}
