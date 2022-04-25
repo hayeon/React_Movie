@@ -1,7 +1,6 @@
-//로딩/ 영화 리스트 전체를 보여주는 스크린
-
+//로딩/ 영화 리스트 전체를 보여주는 컴포넌트
 import { useEffect, useState } from "react";
-import Movie from "./compo/Movie";
+import Movie from "../compo/Movie";
 
 function Home () {
     const [loding, setLoding] = useState(true);
@@ -18,8 +17,7 @@ function Home () {
         useEffect ( () => {
         getMovieList();
          }, [] );
-  
-      console.log(movieList);
+
   
     return (
       <div>
