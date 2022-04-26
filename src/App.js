@@ -24,7 +24,7 @@ function App() {
   
   <Switch>
     <Route path="/movie">
-      <h1>배고파요</h1>
+    <Detail></Detail>
     </Route>
 
     <Route path="/">
