@@ -27,6 +27,7 @@ function Home () {
           {movieList.map((movie) => (
            <Movie  //props를 Movie로 줌
            key={movie.id}
+           id={movie.id}
            posterImage={movie.medium_cover_image}
            title= {movie.title}
            summary= {movie.summary} 

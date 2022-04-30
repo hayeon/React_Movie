@@ -1,6 +1,7 @@
 //라우터 렌더링
 import {BrowserRouter as Router,
         Switch, Route,} from "react-router-dom";
+import MyPage from "./compo/MyPage";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 
@@ -23,13 +24,18 @@ function App() {
   <Router>
   
   <Switch>
-    <Route path="/movie">
+    <Route path="/movie/:jmt">
     <Detail></Detail>
+    </Route>
+
+    <Route path="/mypage">
+    <MyPage></MyPage>
     </Route>
 
     <Route path="/">
       <Home />
     </Route>
+
   </Switch>
 
 </Router>
