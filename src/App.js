@@ -24,7 +24,7 @@ function App() {
   <Router>
   
   <Switch>
-    <Route path="/movie/:jmt">
+    <Route path="/movie/:id">
     <Detail></Detail>
     </Route>
 
