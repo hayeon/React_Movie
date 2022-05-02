@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+  height: 2000px;
+  background-color: black;
+}
+section {
+  height: 100vh;
+  background : url(https://assets.nflxext.com/ffe/siteui/vlv3/3e521d6d-a53b-4c3f-a85f-dd77c06f7ac7/58dcc237-af68-4571-a876-9dc52e1c06f7/KR-ko-20220425-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
+}
+section::before {
+  content: '';
+  background: linear-gradient(to top, black, transparent);
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.Intro h1{
+  color: white;
+  font-size: 6em;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  font-family: sans-serif;
+}

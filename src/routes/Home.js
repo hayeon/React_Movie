@@ -1,5 +1,6 @@
 //로딩/ 영화 리스트 전체를 보여주는 컴포넌트
 import { useEffect, useState } from "react";
+import Intro from "../compo/Intro";
 import Movie from "../compo/Movie";
 
 function Home () {
@@ -22,7 +23,7 @@ function Home () {
     return (
       <div>
         {loding ? ( 
-        <h1>Loding</h1>) : (
+        <Intro></Intro>) : (
         <div> 
           {movieList.map((movie) => (
            <Movie  //props를 Movie로 줌
